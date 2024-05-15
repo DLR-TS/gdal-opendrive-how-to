@@ -36,3 +36,10 @@ docker run --rm -v ${PWD}:/home -it gdal/xodr ogr2ogr -f "GPKG" /home/<file>.gpk
 ```
 
 Our goal is to make these functions conveniently usable through the official GDAL distribution in future, also enabling drag-and-drop of XODR into QGIS, for example.
+
+## References
+
+- Scholz, Michael and Böttcher, Oliver and Bardak, Gülşen (2024): [*Making domain-specific automotive engineering road space data in OpenDRIVE available for GIS*](https://elib.dlr.de/203887/). International Conference on Geoinformation Data, Processing and Applications (GeoDPA), Oldenburg, Germany.
+- Scholz, Michael und Böttcher, Oliver und Bardak, Gülşen (2024): [*OpenDRIVE-HD-Karten mittels GDAL ins GIS bringen*](https://elib.dlr.de/198809/). FOSSGIS 2024, Hamburg, Germany. 
+- Scholz, Michael and Bardak, Gülşen (2023): [*Providing a libOpenDRIVE-based GDAL driver for conversion of lane-detailed road network datasets commonly used in automotive engineering into GIS tools*](https://elib.dlr.de/194420/). FOSS4G 2023, Prizren, Kosovo. 
+- Scholz, Michael and Orozco Idrobo, Ana Maria (2017): [*Supporting the Implementation of Driving Simulator Environments Through Established GIS Approaches by Extending the Geospatial Data Abstraction Library (GDAL) with OpenDRIVE*](https://elib.dlr.de/110123/). In: Proceedings of the Driving Simulator Conference 2017 Europe VR, p. 51-54. Stuttgart, Germany.
