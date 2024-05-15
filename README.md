@@ -39,7 +39,9 @@ Our goal is to make these functions conveniently usable through the official GDA
 
 ## QGIS Demo
 
-https://github.com/DLR-TS/gdal-opendrive-how-to/assets/6084449/8b653324-e726-43fb-83eb-6400de7d67e7
+<video width="640" controls>
+  <source src="https://github.com/DLR-TS/gdal-opendrive-how-to/assets/6084449/8b653324-e726-43fb-83eb-6400de7d67e7" type="video/mp4">
+</video>
 
 ## References
 
