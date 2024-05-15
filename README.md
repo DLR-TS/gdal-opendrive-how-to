@@ -37,6 +37,10 @@ docker run --rm -v ${PWD}:/home -it gdal/xodr ogr2ogr -f "GPKG" /home/<file>.gpk
 
 Our goal is to make these functions conveniently usable through the official GDAL distribution in future, also enabling drag-and-drop of XODR into QGIS, for example.
 
+## QGIS Demo
+
+https://github.com/DLR-TS/gdal-opendrive-how-to/assets/6084449/8b653324-e726-43fb-83eb-6400de7d67e7
+
 ## References
 
 - Scholz, Michael and Böttcher, Oliver and Bardak, Gülşen (2024): [*Making domain-specific automotive engineering road space data in OpenDRIVE available for GIS*](https://elib.dlr.de/203887/). International Conference on Geoinformation Data, Processing and Applications (GeoDPA), Oldenburg, Germany.
