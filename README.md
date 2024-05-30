@@ -4,17 +4,17 @@ Currently, this driver is being [reviewed](https://github.com/OSGeo/gdal/pull/95
 
 ## Getting hands on
 
-For now, clone our DLR development branch [`libopendrive`](https://github.com/DLR-TS/gdal/tree/libopendrive):
+For now, clone our DLR development branch [`libopendrive-pr`](https://github.com/DLR-TS/gdal/tree/libopendrive-pr):
 
 ```bash
-git clone https://github.com/DLR-TS/gdal.git --branch libopendrive --single-branch
+git clone https://github.com/DLR-TS/gdal.git --branch libopendrive-pr --single-branch
 ```
 
-Build the custom Docker image as described in the [XODR driver documentation](https://github.com/DLR-TS/gdal/blob/libopendrive/doc/source/drivers/vector/xodr.rst#convenient-usage-through-docker-image):
+Build the custom Docker image as described in the [XODR driver documentation](https://github.com/DLR-TS/gdal/blob/libopendrive-pr/doc/source/drivers/vector/xodr.rst#convenient-usage-through-docker-image):
 
 ```bash
-cd gdal/docker/ubuntu-small/
-docker build -t gdal/xodr -f DockerfileXODR .
+cd gdal/docker/ubuntu-full/
+docker build -t gdal/xodr -f Dockerfile .
 ```
 
 Verify availability of the driver. Calling `ogrinfo --formats` should list the `XODR` driver as first item:
