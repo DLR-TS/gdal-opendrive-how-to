@@ -1,43 +1,44 @@
 # OpenDRIVE vector driver for GDAL
 
-Currently, this driver is being [reviewed](https://github.com/OSGeo/gdal/pull/9504) in order to be integrated as optional plugin of GDAL. 
+The driver is [scheduled](https://github.com/OSGeo/gdal/pull/9504) to become part of GDAL release 3.10.
 
 ## Getting hands on
 
-For now, clone our DLR development branch [`libopendrive-pr`](https://github.com/DLR-TS/gdal/tree/libopendrive-pr):
+Pull one of the two Docker images which have the driver already included:
+
+- either Ubuntu-based
+  ```bash
+   docker pull ghcr.io/osgeo/gdal:ubuntu-full-latest
+  ```
+- or Alpine-based
+  ```bash
+  docker pull ghcr.io/osgeo/gdal:alpine-normal-latest
+  ```
+
+For example, spawning the Alpine container, verify availability of the driver by calling `ogrinfo --format XODR`:
 
 ```bash
-git clone https://github.com/DLR-TS/gdal.git --branch libopendrive-pr --single-branch
-```
+docker run --rm -it ghcr.io/osgeo/gdal:alpine-normal-latest ogrinfo --format XODR
 
-Build the custom Docker image as described in the [XODR driver documentation](https://github.com/DLR-TS/gdal/blob/libopendrive-pr/doc/source/drivers/vector/xodr.rst#convenient-usage-through-docker-image):
-
-```bash
-cd gdal/docker/ubuntu-full/
-docker build -t gdal/xodr -f Dockerfile .
-```
-
-Verify availability of the driver. Calling `ogrinfo --formats` should list the `XODR` driver as first item:
-
-```bash
-docker run --rm -it gdal/xodr ogrinfo --formats
-
-Supported Formats:
-  XODR -vector- (rov): OpenDRIVE - Open Dynamic Road Information for Vehicle Environment
-  PCIDSK -raster,vector- (rw+v): PCIDSK Database File       
-  PDS4 -raster,vector- (rw+vs): NASA Planetary Data System 4
+Format Details:
+  Short Name: XODR
+  Long Name: OpenDRIVE - Open Dynamic Road Information for Vehicle Environment
+  Supports: Vector
+  Supports: Open() - Open existing dataset.
+<OpenOptionList>
   ...
+</OpenOptionList>
 ```
 
-You can use the new driver functions through the Docker container. For example, use `ogr2ogr` to convert a local `.xodr` file into any other supported OGR output format:
+You can now use the new driver functions through the Docker container. For example, use `ogr2ogr` to convert a local `.xodr` file into GeoPackage, or into any other supported OGR output format:
 
 ```bash
-docker run --rm -v ${PWD}:/home -it gdal/xodr ogr2ogr -f "GPKG" /home/<file>.gpkg /home/<file>.xodr
+docker run --rm -v ${PWD}:/home -it ghcr.io/osgeo/gdal:alpine-normal-latest ogr2ogr -f "GPKG" /home/<file>.gpkg /home/<file>.xodr
 ```
-
-Our goal is to make these functions conveniently usable through the official GDAL distribution in future, also enabling drag-and-drop of XODR into QGIS, for example.
 
 ## QGIS Demo
+
+Our goal is to make these functions conveniently usable through the official GDAL distribution in future, thus, also enabling drag-and-drop of XODR into QGIS. The following video shows a workaround through a previously created GeoPackage.
 
 <video width="640" controls>
   <source src="https://github.com/DLR-TS/gdal-opendrive-how-to/assets/6084449/8b653324-e726-43fb-83eb-6400de7d67e7" type="video/mp4">
