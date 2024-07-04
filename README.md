@@ -38,7 +38,7 @@ docker run --rm -v ${PWD}:/home -it ghcr.io/osgeo/gdal:alpine-normal-latest ogr2
 
 ## QGIS Demo
 
-Our goal is to make these functions conveniently usable through the official GDAL distribution in future, thus, also enabling drag-and-drop of XODR into QGIS. The following video shows a workaround through a previously created GeoPackage.
+Our goal is to make these functions conveniently usable through the official GDAL distribution in future, thus, also enabling drag-and-drop of XODR into QGIS. The following video shows the current workaround through a previously created GeoPackage.
 
 <video width="640" controls>
   <source src="https://github.com/DLR-TS/gdal-opendrive-how-to/assets/6084449/8b653324-e726-43fb-83eb-6400de7d67e7" type="video/mp4">
@@ -46,7 +46,8 @@ Our goal is to make these functions conveniently usable through the official GDA
 
 ## Context references
 
-- Scholz, Michael and Böttcher, Oliver and Bardak, Gülşen (2024): [*Making OpenDRIVE HD map data easily accessible in GIS*](https://elib.dlr.de/197330/). Geospatial World Forum, Rotterdam, Netherlands.        
+- Scholz, Michael and Böttcher, Oliver and Bardak, Gülşen (2024): [*Improving interoperability between OpenDRIVE HD map data and GIS using GDAL*](https://talks.osgeo.org/foss4g-europe-2024/talk/SD7SGV/). FOSS4G Europe 2024, Tartu, Estonia.
+- Scholz, Michael and Böttcher, Oliver and Bardak, Gülşen (2024): [*Making OpenDRIVE HD map data easily accessible in GIS*](https://elib.dlr.de/197330/). Geospatial World Forum 2024, Rotterdam, Netherlands.        
 - Scholz, Michael and Böttcher, Oliver and Bardak, Gülşen (2024): [*Making domain-specific automotive engineering road space data in OpenDRIVE available for GIS*](https://elib.dlr.de/203887/). International Conference on Geoinformation Data, Processing and Applications (GeoDPA), Oldenburg, Germany.
 - Scholz, Michael und Böttcher, Oliver und Bardak, Gülşen (2024): [*OpenDRIVE-HD-Karten mittels GDAL ins GIS bringen*](https://elib.dlr.de/198809/). FOSSGIS 2024, Hamburg, Germany. 
 - Scholz, Michael and Bardak, Gülşen (2023): [*Providing a libOpenDRIVE-based GDAL driver for conversion of lane-detailed road network datasets commonly used in automotive engineering into GIS tools*](https://elib.dlr.de/194420/). FOSS4G 2023, Prizren, Kosovo. 
