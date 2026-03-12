@@ -1,6 +1,6 @@
 # OpenDRIVE vector driver for GDAL
 
-The driver is [scheduled](https://github.com/OSGeo/gdal/pull/9504) to become part of GDAL release 3.10.
+The driver has been added in [GDAL release 3.10](https://gdal.org/en/stable/drivers/vector/xodr.html).
 
 ## Getting hands on
 
